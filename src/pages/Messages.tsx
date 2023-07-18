@@ -15,8 +15,8 @@ function Messages() {
 			</div>
 
 
-			<div className="flex flex-col max-w-[350px] m-auto justify-center">
-				<h3 className="font-bold text-3xl">Welcome to your <br/>inbox!</h3>
+			<div className="flex flex-col max-w-[350px] m-auto justify-center px-2">
+				<h3 className="font-bold text-xl md:text-3xl">Welcome to your <br/>inbox!</h3>
 				<p className="text-gray-400 mt-2">Drop a line, share Tweets and more with private conversations between you and others on Twitter. </p>
 				<button
 	            className="twitter-bg w-[180px] text-white font-semibold p-3 rounded-full mt-6"

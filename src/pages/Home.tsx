@@ -22,7 +22,7 @@ function Home() {
     <>
       <h2 className="px-6 mb-8 text-2xl font-semibold">Home</h2>
 
-      <div className="flex  justify-between px-[150px] gap-x-8 mb-8 text-medium font-semibold border-gray-600 border-b-[1px]">
+      <div className="flex  justify-between px-[50px] md-px-[150px] gap-x-8 mb-8 text-medium font-semibold border-gray-600 border-b-[1px]">
       	 <button className="border-[#1D9BF0] pb-3 border-b-4">For you</button>
      	 <button className="text-gray-600 pb-3">Following</button>
       </div>

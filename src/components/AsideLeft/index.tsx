@@ -4,7 +4,7 @@ import { MdNotificationsNone } from 'react-icons/md';
 import { RiFileListLine } from "react-icons/ri";
 import { FiFeather } from "react-icons/fi";
 import { GoVerified } from "react-icons/go";
-import { AiOutlineUser, AiOutlineTwitter } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineTwitter, AiOutlineGithub } from "react-icons/ai";
 import { CiCircleMore } from "react-icons/ci";
 import { Link, NavLink } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const asideItems = [
 	{title: "Communities", route:"/communities", icon: <BsPeople/>},
 	{title: "Verified", route:"#", icon: <GoVerified/>},
 	{title: "Profile", route:"/profile", icon: <AiOutlineUser/>},
-	{title: "More", route:"#", icon: <CiCircleMore/>},
+	{title: "More", route:"#", icon: <CiCircleMore/>}
 ]
 
 function AsideLeft() {
@@ -40,6 +40,12 @@ function AsideLeft() {
                 </NavLink>
               </li>
             ))}
+            <li>
+                <a href="https://github.com/nickLoza/twitter-clone" target="_blank" className="flex items-center gap-x-4 p-2 rounded-xl hover:bg-[#ffffff20] transition duration-350" >
+                  <AiOutlineGithub/>
+                  <span className="hidden lg:block text-xl">Repository</span>
+                </a>
+              </li>
           </ul>
         </div>
         <button className="flex items-center self-center justify-center text-xl w-12 h-12  lg:w-[100%] lg:text-lg  twitter-bg rounded-full font-bold">

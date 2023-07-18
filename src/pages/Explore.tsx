@@ -12,7 +12,7 @@ function Explore() {
 					</div>
 					<CiSettings size={25} className="mt-3"/>
 				</div>
-			<div className="flex  justify-between px-[25px] gap-x-2 mb-3 text-medium font-semibold border-gray-600 border-b-[1px]">
+			<div className="flex  justify-between text-sm px-1 md:px-[25px] gap-x-2 mb-3 text-medium font-semibold border-gray-600 border-b-[1px]">
 		      	 <button className="border-[#1D9BF0] pb-3 border-b-4">For you</button>
 		     	 <button className="text-gray-600 pb-3">Trending</button>
 		     	 <button className="text-gray-600 pb-3">News</button>
