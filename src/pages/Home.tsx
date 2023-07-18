@@ -62,12 +62,12 @@ function Home() {
         			<p className="text-gray-400">@{item.profileName}</p>
         		</div>
         		<p className="">{item.postText}</p>
-        		{item.media && <img className="py-4" src={item.media} alt="post image" height={100}/>}
-            <div className="flex items-center justify-between w-full text-gray-400 mt-2 pb-2 px-4">
-              <GoComment/>
-              <AiOutlineRetweet/>
-              <AiOutlineHeart/>
-              <BiBarChart/>
+        		{item.media && <img className="pt-4" src={item.media} alt="post image" height={100}/>}
+            <div className="flex items-center justify-between w-full text-gray-400 mt-4 pb-2 px-4">
+              <GoComment className="cursor-pointer hover:text-gray-100"/>
+                <AiOutlineRetweet className="cursor-pointer hover:text-gray-100"/>
+                <AiOutlineHeart className="cursor-pointer hover:text-gray-100"/>
+                <BiBarChart className="cursor-pointer hover:text-gray-100"/>
             </div>
         	</div>
           
