@@ -1,5 +1,6 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { ClipLoader } from "react-spinners"
 
 const Home = lazy(() => import('../pages/Home'));
 const Explore = lazy(() => import('../pages/Explore'));
@@ -12,8 +13,14 @@ const Profile = lazy(() => import('../pages/Profile'));
 
 
 function Routers() {
+	const loaderStyle = {
+	    display: "flex",
+	    justifyContent: "center",
+	    alignItems: "center",
+	    margin: "3rem auto"
+  	};
 	return (
-		<Suspense fallback={<div>Loading...</div>}>
+		<Suspense fallback={<ClipLoader color="#1D9BF0" size={25} cssOverride={loaderStyle}/>}>
 			<Routes>
 				<Route path="/" element={<Navigate to={"/home"}/>}/>
 				<Route path="/home" element={<Home/>}/>
