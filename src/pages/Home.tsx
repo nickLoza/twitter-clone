@@ -1,9 +1,11 @@
 import { ChangeEvent, useState } from "react";
-import { AiOutlineFileGif } from "react-icons/ai";
+import { AiOutlineFileGif, AiOutlineHeart, AiOutlineRetweet } from "react-icons/ai";
 import { CgOptions } from "react-icons/cg";
 import { BsEmojiSmile, BsImage } from "react-icons/bs";
 import { MdOutlineLocationOn } from "react-icons/md";
 import  { tweetsArray } from "../db/twitterDB";
+import { GoComment } from "react-icons/go";
+import { BiBarChart } from "react-icons/bi";
 
 function Home() {
   const [newPost, setNewPost] = useState("");
@@ -52,7 +54,7 @@ function Home() {
       </div>
 
       {tweetsArray.map((item, i) => (
-        <div className="flex mt-4 pb-4 border-gray-600 border-b-[1px]" key={i}>
+        <div className="flex mt-4 pb-2 border-gray-600 border-b-[1px]" key={i}>
         	<img className="self-start mr-2" src={item.profilePic} alt="account" height={50} width={50}/>
         	<div className="mt-2">
         		<div className="flex gap-x-2">
@@ -61,7 +63,14 @@ function Home() {
         		</div>
         		<p className="">{item.postText}</p>
         		{item.media && <img className="py-4" src={item.media} alt="post image" height={100}/>}
+            <div className="flex items-center justify-between w-full text-gray-400 mt-2 pb-2 px-4">
+              <GoComment/>
+              <AiOutlineRetweet/>
+              <AiOutlineHeart/>
+              <BiBarChart/>
+            </div>
         	</div>
+          
         </div>
 
       ))}

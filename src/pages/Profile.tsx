@@ -1,6 +1,8 @@
-import { AiOutlineArrowLeft } from "react-icons/ai"
+import { AiOutlineArrowLeft, AiOutlineHeart, AiOutlineRetweet } from "react-icons/ai"
 import { MdOutlineLocationOn } from "react-icons/md"
 import { tweetsArray } from "../db/twitterDB"
+import { GoComment } from "react-icons/go"
+import { BiBarChart } from "react-icons/bi"
 
 function Profile() {
 	return (
@@ -53,7 +55,7 @@ function Profile() {
 
 			<section>
 				 {tweetsArray.map((item, i) => (
-        <div className="flex mt-4 pb-4 border-gray-600 border-b-[1px]" key={i}>
+        <div className="flex mt-4 pb-2 border-gray-600 border-b-[1px]" key={i}>
         	<img className="self-start mr-2" src="http://robohash.org/888" alt="account" height={50} width={50}/>
         	<div className="mt-2">
         		<div className="flex gap-x-2">
@@ -62,6 +64,12 @@ function Profile() {
         		</div>
         		<p className="">{item.postText}</p>
         		{item.media && <img className="py-4" src={item.media} alt="post image" height={100}/>}
+        		<div className="flex items-center justify-between w-full text-gray-400 mt-4 pb-2 px-4">
+	              <GoComment/>
+	              <AiOutlineRetweet/>
+	              <AiOutlineHeart/>
+	              <BiBarChart/>
+            	</div>
         	</div>
         </div>
 
