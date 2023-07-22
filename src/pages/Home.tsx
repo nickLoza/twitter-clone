@@ -6,6 +6,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import  { tweetsArray } from "../db/twitterDB";
 import { GoComment } from "react-icons/go";
 import { BiBarChart } from "react-icons/bi";
+import NavigateButtons from "../components/NavigateButtons";
 
 function Home() {
   const [newPost, setNewPost] = useState("");
@@ -24,10 +25,7 @@ function Home() {
     <>
       <h2 className="px-6 mb-8 text-2xl font-semibold">Home</h2>
 
-      <div className="flex  justify-between px-[50px] md-px-[150px] gap-x-8 mb-8 text-medium font-semibold border-gray-600 border-b-[1px]">
-      	 <button className="border-[#1D9BF0] pb-3 border-b-4">For you</button>
-     	 <button className="text-gray-600 pb-3">Following</button>
-      </div>
+      <NavigateButtons buttons={["For You","Following"]}/>
       <div className="px-8 pb-4 border-gray-600 border-b-[1px]">
         <textarea
           className="w-full  text-xl bg-transparent resize-none outline-none"

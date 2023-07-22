@@ -1,15 +1,12 @@
 import { AiFillHeart } from "react-icons/ai"
+import NavigateButtons from "../components/NavigateButtons"
 
 function Notifications() {
 	return (
 		<>
 			<h2 className="px-6 mb-8 text-2xl font-semibold">Notifications</h2>
 
-			<div className="flex  justify-between px-[75px] gap-x-2 mb-3 text-medium font-semibold border-gray-600 border-b-[1px]">
-		      	 <button className="border-[#1D9BF0] pb-3 border-b-4 w-14">All</button>
-		     	 <button className="text-gray-600 pb-3">Verified</button>
-		     	 <button className="text-gray-600 pb-3">Mentions</button>
-      		</div>
+      		<NavigateButtons buttons={["All","Verified","Mentions"]}/>
 
       		<div>
       			<div className="flex px-3">
